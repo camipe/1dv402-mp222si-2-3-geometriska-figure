@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _1DV402.S2.L03A
 {
-    class Shape
+    abstract class Shape
     {
         // Declaring fields
         private double _length;
