@@ -59,10 +59,10 @@ namespace _1DV402.S2.L03A
         // Methods
         public override string ToString()
         {
-            return string.Format("a");
+            return String.Format(" Längd  :{0, 8}\n Bredd  :{1, 8}\n Omkrets:{2, 8}\n Area   :{3, 8}\n", Length, Width, Perimeter, Area);
         }
     }
 
     // Enum to keep track of the menu choices
-    enum ShapeType { Indefinite, Ellipse, Rectangle };
+    enum ShapeType {  Ellipse, Rectangle };
 }

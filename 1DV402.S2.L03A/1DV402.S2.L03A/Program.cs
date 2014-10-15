@@ -43,7 +43,7 @@ namespace _1DV402.S2.L03A
                     Console.WriteLine("\n FEL! Ange ett nummer mellan 0 och 2.\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.BackgroundColor = ConsoleColor.DarkBlue;
-                    Console.Write("\n   Tryck tangent för att fortsätta   ");
+                    Console.Write("\n   Tryck en tangent för att fortsätta   ");
                     Console.ResetColor();
                     Console.CursorVisible = false;
                     Console.ReadKey(true);
@@ -64,10 +64,25 @@ namespace _1DV402.S2.L03A
             switch (shapeType)
             {
                 case ShapeType.Ellipse:
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("-------------------------");
+                    Console.WriteLine("-        Ellips         -");
+                    Console.WriteLine("-------------------------");
+                    Console.ResetColor();
+                    Console.WriteLine();
                     Ellipse ellipse = new Ellipse(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden: "));
                     return ellipse;
 
                 case ShapeType.Rectangle:
+                    Console.WriteLine();
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("-------------------------");
+                    Console.WriteLine("-       Rectangle       -");
+                    Console.WriteLine("-------------------------");
+                    Console.ResetColor();
+                    Console.WriteLine();
                     Rectangle rectangle = new Rectangle(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden: "));
                     return rectangle;
 
@@ -106,15 +121,15 @@ namespace _1DV402.S2.L03A
             Console.WriteLine("-------------------------");
             Console.ResetColor();   
             Console.WriteLine();
-            Console.WriteLine("0. Avsluta.");
+            Console.WriteLine(" 0. Avsluta.");
             Console.WriteLine();
-            Console.WriteLine("1. Ellips.");
+            Console.WriteLine(" 1. Ellips.");
             Console.WriteLine();
-            Console.WriteLine("2. Rektangel");
+            Console.WriteLine(" 2. Rektangel");
             Console.WriteLine();
             Console.WriteLine("=========================");
             Console.WriteLine();
-            Console.Write("Ange menyval [0-2]: ");
+            Console.Write(" Ange menyval [0-2]: ");
 
         }
 
@@ -135,7 +150,7 @@ namespace _1DV402.S2.L03A
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.Write("\n   Tryck tangent för att fortsätta   ");
+            Console.Write("\n   Tryck en tangent för att fortsätta   ");
             Console.ResetColor();
             Console.CursorVisible = false;
             Console.ReadKey(true);
