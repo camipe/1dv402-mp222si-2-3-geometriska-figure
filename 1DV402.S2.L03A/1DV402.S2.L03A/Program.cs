@@ -12,9 +12,21 @@ namespace _1DV402.S2.L03A
         {
         }
 
-        private static ShapeType CreateShape(ShapeType shapeType)
+        private static Shape CreateShape(ShapeType shapeType)
         {
-            throw new NotImplementedException();
+            switch (shapeType)
+            {
+                case ShapeType.Ellipse:
+                    Ellipse ellipse = new Ellipse(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden"));
+                    return ellipse;
+
+                case ShapeType.Rectangle:
+                    Rectangle rectangle = new Rectangle(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden"));
+                    return rectangle;
+
+                default:
+                    throw new NotImplementedException("Ingen giltig Shapetyp");
+            }
         }
 
         private static double ReadDoubleGreaterThanZero(string prompt)

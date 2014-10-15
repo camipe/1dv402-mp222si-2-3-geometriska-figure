@@ -55,6 +55,12 @@ namespace _1DV402.S2.L03A
             Length = length;
             Width = width;
         }
+
+        // Methods
+        public override string ToString(Shape s)
+        {
+            string.Format("a");
+        }
     }
 
     // Enum to keep track of the menu choices
