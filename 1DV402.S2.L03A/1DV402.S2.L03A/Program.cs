@@ -10,6 +10,53 @@ namespace _1DV402.S2.L03A
     {
         static void Main(string[] args)
         {
+            int menuChoice;
+            bool exit = false;
+
+            do
+            {
+                ViewMenu();
+                if (int.TryParse(Console.ReadLine(), out menuChoice) && menuChoice <= 2)
+                {
+                    switch (menuChoice)
+                    {
+                        case 0:
+                            exit = true;
+                            break;
+
+                        case 1:
+                            ViewShapeDetail(CreateShape(ShapeType.Ellipse));
+                            break;
+
+                        case 2:
+                            ViewShapeDetail(CreateShape(ShapeType.Rectangle));
+                            break;
+
+                        default:
+                            throw new ArgumentException("Problem med menyval. Försök igen.");
+                    }
+                }
+                else
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\n FEL! Ange ett nummer mellan 0 och 2.\n");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\n   Tryck tangent för att fortsätta   ");
+                    Console.ResetColor();
+                    Console.CursorVisible = false;
+                    Console.ReadKey(true);
+                    Console.Clear();
+                    Console.CursorVisible = true;
+                }
+                    
+
+            
+                
+            } while (!exit);
+
+
         }
 
         private static Shape CreateShape(ShapeType shapeType)
@@ -17,11 +64,11 @@ namespace _1DV402.S2.L03A
             switch (shapeType)
             {
                 case ShapeType.Ellipse:
-                    Ellipse ellipse = new Ellipse(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden"));
+                    Ellipse ellipse = new Ellipse(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden: "));
                     return ellipse;
 
                 case ShapeType.Rectangle:
-                    Rectangle rectangle = new Rectangle(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden"));
+                    Rectangle rectangle = new Rectangle(ReadDoubleGreaterThanZero("Ange längden: "), ReadDoubleGreaterThanZero("Ange bredden: "));
                     return rectangle;
 
                 default:
@@ -44,6 +91,7 @@ namespace _1DV402.S2.L03A
                 Console.BackgroundColor = ConsoleColor.Red;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n FEL! Ange ett positivt flyttal!\n");
+                Console.ResetColor();                
             } while (true);
         }
 
@@ -52,8 +100,11 @@ namespace _1DV402.S2.L03A
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("-------------------------");
+            Console.WriteLine("-                       -");
             Console.WriteLine("-  Geometriska figurer  -");
+            Console.WriteLine("-                       -");
             Console.WriteLine("-------------------------");
+            Console.ResetColor();   
             Console.WriteLine();
             Console.WriteLine("0. Avsluta.");
             Console.WriteLine();
@@ -63,20 +114,33 @@ namespace _1DV402.S2.L03A
             Console.WriteLine();
             Console.WriteLine("=========================");
             Console.WriteLine();
-            Console.WriteLine("Ange menyval [0-2]: ");
+            Console.Write("Ange menyval [0-2]: ");
 
         }
 
         private static void ViewShapeDetail(Shape shape)
         {
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("-------------------------");
             Console.WriteLine("-       Detaljer        -");
             Console.WriteLine("-------------------------");
+            Console.ResetColor();
             Console.WriteLine();
-            Console.WriteLine(shape.ToString(shape));
+            Console.WriteLine(shape.ToString());
             Console.WriteLine();
             Console.WriteLine("=========================");
 
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.Write("\n   Tryck tangent för att fortsätta   ");
+            Console.ResetColor();
+            Console.CursorVisible = false;
+            Console.ReadKey(true);
+            Console.Clear();
+            Console.CursorVisible = true;
         }
     }
 }

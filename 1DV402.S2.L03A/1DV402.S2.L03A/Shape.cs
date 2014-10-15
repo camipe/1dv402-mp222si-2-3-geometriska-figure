@@ -45,7 +45,7 @@ namespace _1DV402.S2.L03A
                 {
                     throw new ArgumentException("Talet får inte vara negativt");
                 }
-                else { Width = _width; }
+                else { _width = value; }
             }
         }
 
@@ -57,9 +57,9 @@ namespace _1DV402.S2.L03A
         }
 
         // Methods
-        public override string ToString(Shape s)
+        public override string ToString()
         {
-            string.Format("a");
+            return string.Format("a");
         }
     }
 
