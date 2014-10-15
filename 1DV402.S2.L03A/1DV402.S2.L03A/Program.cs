@@ -63,7 +63,7 @@ namespace _1DV402.S2.L03A
             Console.WriteLine();
             Console.WriteLine("-------------------------");
             Console.WriteLine();
-            Console.WriteLine("Ange menyval [0-2]:");
+            Console.WriteLine("Ange menyval [0-2]: ");
 
         }
 
