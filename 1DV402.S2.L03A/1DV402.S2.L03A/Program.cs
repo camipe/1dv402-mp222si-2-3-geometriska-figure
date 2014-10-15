@@ -14,7 +14,22 @@ namespace _1DV402.S2.L03A
 
         private static ShapeType CreateShape(ShapeType shapeType)
         {
-            throw new NotImplementedException;
+            throw new NotImplementedException();
+        }
+
+        private static double ReadDoubleGreaterThanZero(string prompt)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ViewMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ViewShapeDetail(Shape shape)
+        {
+
         }
     }
 }
