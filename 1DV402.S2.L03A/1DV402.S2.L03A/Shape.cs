@@ -36,7 +36,7 @@ namespace _1DV402.S2.L03A
             get;
         }
 
-        public abstract double Width
+        public double Width
         {
             get { return _width; }
             set
@@ -45,6 +45,7 @@ namespace _1DV402.S2.L03A
                 {
                     throw new ArgumentException("Talet får inte vara negativt");
                 }
+                else { Width = _width; }
             }
         }
 
