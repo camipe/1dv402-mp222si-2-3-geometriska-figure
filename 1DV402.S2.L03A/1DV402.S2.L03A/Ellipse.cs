@@ -19,5 +19,12 @@ namespace _1DV402.S2.L03A
         {
             get { return Math.PI * Math.Sqrt(2 * (Length * 2) * 2 * (Height * 2));  }
         }
+
+        public Ellipse(double length, double width)  
+            :base(length, width) 
+        {
+
+        }
+
     }
 }
