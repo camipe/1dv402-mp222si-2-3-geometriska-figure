@@ -31,7 +31,20 @@ namespace _1DV402.S2.L03A
 
         private static double ReadDoubleGreaterThanZero(string prompt)
         {
-            throw new NotImplementedException();
+            double number;
+
+            do
+            {
+                Console.Write(prompt);
+                if (double.TryParse(Console.ReadLine(), out number) && number > 0 )
+                {
+                    return number;
+                }
+
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\n FEL! Ange ett positivt flyttal!\n");
+            } while (true);
         }
 
         private static void ViewMenu()
