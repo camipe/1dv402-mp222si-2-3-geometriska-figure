@@ -11,13 +11,13 @@ namespace _1DV402.S2.L03A
         // Returning area
         public override double Area
         {
-            get { return Length * Height * Math.PI; }
+            get { return Length * Width * Math.PI; }
         }
 
         // Returning perimeter
         public override double Perimeter
         {
-            get { return Math.PI * Math.Sqrt(2 * (Length * 2) * 2 * (Height * 2));  }
+            get { return Math.PI * Math.Sqrt(2 * (Length * 2) * 2 * (Width * 2));  }
         }
 
         public Ellipse(double length, double width)  

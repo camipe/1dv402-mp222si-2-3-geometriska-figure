@@ -10,7 +10,7 @@ namespace _1DV402.S2.L03A
     {
         // Declaring fields
         private double _length;
-        private double _height;
+        private double _width;
 
         // Properties
         public abstract double Area
@@ -36,9 +36,9 @@ namespace _1DV402.S2.L03A
             get;
         }
 
-        public abstract double Height
+        public abstract double Width
         {
-            get { return _height; }
+            get { return _width; }
             set
             {
                 if (value < 0)
@@ -49,10 +49,10 @@ namespace _1DV402.S2.L03A
         }
 
         // Constructor
-        protected Shape(double length, double height)
+        protected Shape(double length, double width)
         {
             Length = length;
-            Height = height;
+            Width = width;
         }
     }
 }
