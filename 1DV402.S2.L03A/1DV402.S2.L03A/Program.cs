@@ -11,5 +11,10 @@ namespace _1DV402.S2.L03A
         static void Main(string[] args)
         {
         }
+
+        private static ShapeType CreateShape(ShapeType shapeType)
+        {
+            throw new NotImplementedException;
+        }
     }
 }

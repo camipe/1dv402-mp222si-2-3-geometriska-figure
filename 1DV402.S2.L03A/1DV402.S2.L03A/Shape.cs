@@ -57,5 +57,5 @@ namespace _1DV402.S2.L03A
     }
 
     // Enum to keep track of the menu choices
-    enum ShapeObjectType { Indefinite, Ellipse, Rectangle };
+    enum ShapeType { Indefinite, Ellipse, Rectangle };
 }
