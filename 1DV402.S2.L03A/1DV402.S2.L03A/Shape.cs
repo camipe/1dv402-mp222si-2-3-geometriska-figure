@@ -49,7 +49,7 @@ namespace _1DV402.S2.L03A
         }
 
         // Constructor
-        public Shape(double length, double height)
+        protected Shape(double length, double height)
         {
             Length = length;
             Height = height;
