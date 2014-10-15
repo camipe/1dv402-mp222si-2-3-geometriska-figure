@@ -49,7 +49,22 @@ namespace _1DV402.S2.L03A
 
         private static void ViewMenu()
         {
-            throw new NotImplementedException();
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("-  Geometriska figurer  -");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine();
+            Console.WriteLine("0. Avsluta.");
+            Console.WriteLine();
+            Console.WriteLine("1. Ellips.");
+            Console.WriteLine();
+            Console.WriteLine("2. Rektangel");
+            Console.WriteLine();
+            Console.WriteLine("-------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Ange menyval [0-2]:");
+
         }
 
         private static void ViewShapeDetail(Shape shape)
