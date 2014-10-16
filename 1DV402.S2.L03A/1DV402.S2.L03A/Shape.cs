@@ -59,7 +59,7 @@ namespace _1DV402.S2.L03A
         // Method that returns a string in a special format
         public override string ToString()
         {
-            return String.Format(" Längd  :{0, 8}\n Bredd  :{1, 8}\n Omkrets:{2, 8}\n Area   :{3, 8}\n", Length, Width, Perimeter, Area);
+            return String.Format(" Längd  :{0, 8:0.00}\n Bredd  :{1, 8:0.00}\n Omkrets:{2, 8:0.00}\n Area   :{3, 8:0.00}\n", Length, Width, Perimeter, Area);
         }
     }
 
