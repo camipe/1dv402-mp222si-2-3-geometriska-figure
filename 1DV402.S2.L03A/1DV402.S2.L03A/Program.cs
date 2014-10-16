@@ -61,6 +61,7 @@ namespace _1DV402.S2.L03A
             switch (shapeType)
             {
                 case ShapeType.Ellipse:
+                    Console.WriteLine();
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("-------------------------");
