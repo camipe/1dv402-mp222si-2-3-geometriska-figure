@@ -10,9 +10,11 @@ namespace _1DV402.S2.L03A
     {
         static void Main(string[] args)
         {
+            // Variables
             int menuChoice;
             bool exit = false;
 
+            // Do-While loop that runs the menu as long exit is not equal to true.
             do
             {
                 ViewMenu();
@@ -50,15 +52,10 @@ namespace _1DV402.S2.L03A
                     Console.Clear();
                     Console.CursorVisible = true;
                 }
-                    
-
-            
-                
             } while (!exit);
-
-
         }
 
+        // Asks for shape measurement and creates and object in either Rectangle or Ellipse depending on what parameter is used.
         private static Shape CreateShape(ShapeType shapeType)
         {
             switch (shapeType)
@@ -91,6 +88,7 @@ namespace _1DV402.S2.L03A
             }
         }
 
+        // User input of Double numbers, it will loop until a positive double is entered.
         private static double ReadDoubleGreaterThanZero(string prompt)
         {
             double number;
@@ -98,7 +96,7 @@ namespace _1DV402.S2.L03A
             do
             {
                 Console.Write(prompt);
-                if (double.TryParse(Console.ReadLine(), out number) && number > 0 )
+                if (double.TryParse(Console.ReadLine(), out number) && number > 0)
                 {
                     return number;
                 }
@@ -106,10 +104,11 @@ namespace _1DV402.S2.L03A
                 Console.BackgroundColor = ConsoleColor.Red;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n FEL! Ange ett positivt flyttal!\n");
-                Console.ResetColor();                
+                Console.ResetColor();
             } while (true);
         }
 
+        // Method to present the menu
         private static void ViewMenu()
         {
             Console.BackgroundColor = ConsoleColor.Green;
@@ -119,7 +118,7 @@ namespace _1DV402.S2.L03A
             Console.WriteLine("-  Geometriska figurer  -");
             Console.WriteLine("-                       -");
             Console.WriteLine("-------------------------");
-            Console.ResetColor();   
+            Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine(" 0. Avsluta.");
             Console.WriteLine();
@@ -132,7 +131,7 @@ namespace _1DV402.S2.L03A
             Console.Write(" Ange menyval [0-2]: ");
 
         }
-
+        // Method to present the shape details
         private static void ViewShapeDetail(Shape shape)
         {
             Console.WriteLine();
